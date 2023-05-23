@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>name</td>
+            <td>email</td>
+            <td>pass</td>
+        </tr>
+        <tbody id="record">
+
+        </tbody>
+    </table>
+    <script>
+        let tbl = "";
+
+        class demo {
+            constructor(name, email, pass){
+                this.data = [
+                    {
+                        name:"smit",
+                        email:"smit@gmail.com",
+                        pass: "12345",
+                    },
+                    {
+                        name:"abhi",
+                        email:"abhi@gmail.com",
+                        pass: "67890",
+                    },
+                    {
+                        name:"harsh",
+                        email:"harsh@gmail.com",
+                        pass: "45678",
+                    },
+                    {
+                        name:"dhruv",
+                        email:"dhruv@gmail.com",
+                        pass: "98742",
+                    },
+                ]
+            };
+
+            details = () => {
+                this.data.map((val)=>{
+                    tbl += `
+                            <tr>
+                                <td>${val.name}</td>
+                                <td>${val.email}</td>
+                                <td>${val.pass}</td>
+                            </tr>
+                            `
+                });
+                document.getElementById('record').innerHTML = tbl;
+            }
+        }
+
+        let obj = new demo();
+        obj.details();
+    </script>
+</body>
+</html>

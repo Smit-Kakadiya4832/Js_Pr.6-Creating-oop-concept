@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+</head>
+
+<body>
+    <script>
+        var p, c, b, m, C, pers;
+
+        var p = parseInt(prompt("Enter marks of Physics (out of 100) :- "));
+        var c = parseInt(prompt("Enter marks of Physics (out of 100) :- "));
+        var b = parseInt(prompt("Enter marks of Physics (out of 100) :- "));
+        var m = parseInt(prompt("Enter marks of Physics (out of 100) :- "));
+        var C = parseInt(prompt("Enter marks of Physics (out of 100) :- "));
+
+        pers = ((p + c + b + m + C) = 100) / 500;
+
+        document.write("Total marks is " + pers);
+        document.write("<br>");
+
+        class result {
+            data = () => {
+                if (pers >= 90) {
+                    document.write("grade A");
+                } else {
+                    if (pers >= 80) {
+                        document.write("Grade B");
+                    } else {
+                        if (pers >= 70) {
+                            document.write("Grade C");
+                        }
+                        else {
+                            if (pers >= 60) {
+                                document.write("Grade D");
+                            }
+                            else {
+                                if (pers >= 50) {
+                                    document.write("Grade E");
+                                }
+                                else {
+                                    document.write("Grade F");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        let obj = new result;
+        obj.data();
+
+    </script>
+</body>
+
+</html>
